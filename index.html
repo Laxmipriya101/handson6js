@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <title>js6</title>
+  </head>
+  <body>
+    <h1 style="color: red">Problem Solving</h1>
+    <h2>1.Find the Smaller Angle</h2>
+    <pre style="color: blue">
+        var Minimal_Angle = (h, m) => 
+        {
+          h=h%12;
+          let hour = (h*360)/12 + (m*360)/(12*60);
+          let min = (m*360)/60;
+          let angle = Math.abs(hour-min);
+  
+          if(angle>180)
+          return 360-angle;
+          else
+          return angle;
+       
+        };
+    </pre>
+
+    <h2>2.Check whether the year is Leap year or not.</h2>
+    <pre style="color: blue">
+       var Check_Leap = (year) => 
+       {
+          if( year % 400 === 0 || ( year % 100 !==0 && year % 4 === 0))
+            {
+              return "Leap Year";
+            }
+          return "Non Leap Year";
+
+
+        };
+    </pre>
+
+    <h2>3.Perfect Number Check.</h2>
+    <pre style="color: blue">
+       var Perfect_Check = (N) => 
+       {
+         let s=0;
+         let i=1;
+         while(i<=N/2){
+              if(N%i===0)
+              s=s+i;
+              i++;
+            }
+           if(N===1){
+              return "YES";
+            }
+          return "NO";
+        };
+    </pre>
+
+    <h2>4.Reverse a Number.</h2>
+    <pre style="color: blue">
+       var Reverse_Number = (N) => 
+       {
+         let rev= 0;
+         while(N>0){
+             rev = rev*10+ N %10;
+             N= Math.floor(N/10);
+            }
+           return rev;
+        };
+    </pre>
+
+    <h2>5.Substring Check.</h2>
+    <pre style="color: blue">
+      var Substring_Check = (S1, S2) => 
+      {
+         if (S1.includes(S2)) {
+             return "YES";
+            } else {
+                 return "NO";
+                }   
+        };
+    </pre>
+  </body>
+</html>
